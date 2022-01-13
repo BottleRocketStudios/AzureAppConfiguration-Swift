@@ -1,0 +1,1 @@
+AzureAppConfiguration-Swift

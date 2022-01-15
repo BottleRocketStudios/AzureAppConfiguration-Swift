@@ -7,17 +7,6 @@ class AzureAppConfigurationTests: XCTestCase {
     /// Fill out the endpoint, secret, and credential with values obtained when setting up an
     /// Azure App Configuration instance in the dashboard
     @available(macOS 12.0, *)
-    func testExample() async throws {
-        let endpoint = ""
-        let secret = ""
-        let credential = ""
-
-        // Fetch and decode the configuration
-        let request = try AzureAppConfiguration.prepareRequest(endpoint: endpoint, secret: secret, credential: credential)
-        let (data, _) = try await URLSession.shared.data(for: request)
-        let dictionary = try AzureAppConfiguration.decodeResponse(data: data)
-        XCTAssert(!dictionary.isEmpty)
-    }
 
     /// This test verifies that if the endpoint provided is not an https URL, the
     /// preparation function will throw an error.

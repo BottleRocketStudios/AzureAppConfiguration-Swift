@@ -33,7 +33,7 @@ class AzureAppConfigurationTests: XCTestCase {
         let secret = "Zm9v"
         let credential = "foo"
         let request = try AzureAppConfiguration.prepareRequest(endpoint: endpoint, secret: secret, credential: credential)
-        XCTAssert(!request.debugDescription.isEmpty)
+        XCTAssertFalse(request.debugDescription.isEmpty)
     }
 
     // Tests to write for decoding:

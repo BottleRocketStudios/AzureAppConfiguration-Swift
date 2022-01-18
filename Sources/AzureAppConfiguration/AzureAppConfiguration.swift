@@ -6,7 +6,7 @@ public struct AzureAppConfiguration {
     /// Errors for preparing an Azure App Configuration request.
     /// Internal errors should never occur; please report them to the maintainer
     /// if they do.
-    enum PreparationError: Error {
+    public enum PreparationError: Error {
         case internalError
         case urlCouldNotBePreparedFromEndpoint
         case secretCouldNotBeDecodedAsBase64
@@ -24,7 +24,7 @@ public struct AzureAppConfiguration {
 
         // Create a URL request
         let urlString = "\(endpoint)/kv?api-version=1"
-        guard endpoint.contains("https://"), let url = URL(string: urlString) else { throw PreparationError.urlCouldNotBePreparedFromEndpoint }
+        guard endpoint.starts(with: "https://"), let url = URL(string: urlString) else { throw PreparationError.urlCouldNotBePreparedFromEndpoint }
         var request = URLRequest(url: url)
 
         // Add the headers required by Azure App Configuration

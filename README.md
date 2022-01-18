@@ -4,8 +4,7 @@ The AzureAppConfiguration package allows for simple construction of
 a `URLRequest` for Azure's App Configuration Service, and decoding
 the response from this service into a dictionary.
 
-A discussion of what Azure App Configuration can be found at:
-https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview
+A discussion of what Azure App Configuration can be found [here](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview).
 
 ## Overview
 
@@ -58,7 +57,7 @@ When decoding, typical JSON decoding errors may be thrown.
 
 ### See also
 
-https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview
+[OVERVIEW](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview)
 
 ## Example
 

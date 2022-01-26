@@ -38,8 +38,7 @@ preparation, the `AzureAppConfiguration.prepareRequest()` method ensures that al
 headers are set properly.
 
 You'll need to provide the endpoint, secret, and credential as obtained from the
-Azure App Configuration dashboard. See documentation on setting up this service here:
-*** WRITE MEDIUM ARTICLE AND PASTE URL HERE ***
+Azure App Configuration dashboard. See documentation on setting up this service [here](https://medium.com/@russellmirabelli/azure-app-configuration-for-mobile-apps-40c2f650a410) .
 
 ### Decoding the response
 

@@ -4,7 +4,7 @@ The AzureAppConfiguration package allows for simple construction of
 a `URLRequest` for Azure's App Configuration Service, and decoding
 the response from this service into a dictionary.
 
-A discussion of what Azure App Configuration can be found [here](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview).
+A discussion of what Azure App Configuration is can be found [here](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview).
 
 ## Overview
 
@@ -17,7 +17,7 @@ or whenever you want to check if the configuration has changed post-launch.
 
 A very simple example can be found in the unit tests, and is also below:
 
-```
+```swift
 let endpoint = "https://OBTAINED-FROM-DASHBOARD.azconfig.io"
 let secret = "PASTE-SECRET-HERE"
 let credential = "PASTE-CREDENTIAL-HERE"
@@ -66,21 +66,17 @@ See the overall sample from within the unit tests, or as above.
 
 Requires iOS 13.0, tvOS 13.0, macOS 10.15
 
-
 ## Installation
 
 Add this to your project using Swift Package Manager. In Xcode that is simply: File > Swift Packages > Add Package Dependency... and you're done.
-
 
 ## Author
 
 [Bottle Rocket Studios](https://www.bottlerocketstudios.com/)
 
-
 ## License
 
 AzureAppConfiguration is available under the Apache 2.0 license. See [the LICENSE file](LICENSE) for more information.
-
 
 ## Contributing
 

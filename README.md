@@ -28,6 +28,9 @@ let (data, _) = try await URLSession.shared.data(for: request)
 let dictionary = try AzureAppConfiguration.decodeResponse(data: data)
 ```
 
+Naturally, you'll want to obfuscate any keys stored in your application. For this,
+I recommend the obfuscation class in [UtiliKit](https://github.com/BottleRocketStudios/iOS-UtiliKit).
+
 ## Topics
 
 ### Preparing a request

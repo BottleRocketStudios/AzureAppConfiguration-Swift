@@ -1,7 +1,14 @@
+//
+//  AzureAppConfiguration.swift
+//  AzureAppConfiguration
+//
+//  Created by Russell Mirabelli
+//  Copyright © 2022 Bottle Rocket Studios. All rights reserved.
+//
 import CryptoKit
 import Foundation
 
-public struct AzureAppConfiguration {
+public enum AzureAppConfiguration {
 
     /// Errors for preparing an Azure App Configuration request.
     /// Internal errors should never occur; please report them to the maintainer

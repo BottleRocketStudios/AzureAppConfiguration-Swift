@@ -1,3 +1,10 @@
+//
+//  AzureAppConfigurationTests.swift
+//  AzureAppConfiguration
+//
+//  Created by Russell Mirabelli
+//  Copyright © 2022 Bottle Rocket Studios. All rights reserved.
+//
 import XCTest
 @testable import AzureAppConfiguration
 
@@ -44,7 +51,7 @@ class AzureAppConfigurationTests: XCTestCase {
     }
 
     func test_decodeResponseFailsWhenDataIsNotJSON() throws {
-        guard let data = "not a valid response".data(using: .utf8) else { XCTFail("Could not create data somehow"); return }
+        let data = try XCTUnwrap("not a valid response".data(using: .utf8), "could not create data somehow")
         XCTAssertThrowsError(try AzureAppConfiguration.decodeResponse(data: data))
     }
 
@@ -65,7 +72,7 @@ class AzureAppConfigurationTests: XCTestCase {
             ]
         }
         """
-        guard let data = jsonString.data(using: .utf8) else { XCTFail("Could not create data somehow"); return }
+        let data = try XCTUnwrap(jsonString.data(using: .utf8), "could not create data somehow")
         let dictionary = try AzureAppConfiguration.decodeResponse(data: data)
         XCTAssertNotNil(dictionary["foo"], "Dictionary should contain an entry for 'foo'")
     }

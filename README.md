@@ -4,7 +4,7 @@ The AzureAppConfiguration package allows for simple construction of
 a `URLRequest` for Azure's App Configuration Service, and decoding
 the response from this service into a dictionary.
 
-A discussion of what Azure App Configuration can be found [here](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview).
+A discussion of what Azure App Configuration is can be found [here](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview).
 
 ## Overview
 
@@ -17,7 +17,7 @@ or whenever you want to check if the configuration has changed post-launch.
 
 A very simple example can be found in the unit tests, and is also below:
 
-```
+```swift
 let endpoint = "https://OBTAINED-FROM-DASHBOARD.azconfig.io"
 let secret = "PASTE-SECRET-HERE"
 let credential = "PASTE-CREDENTIAL-HERE"
@@ -27,6 +27,9 @@ let request = try AzureAppConfiguration.prepareRequest(endpoint: endpoint, secre
 let (data, _) = try await URLSession.shared.data(for: request)
 let dictionary = try AzureAppConfiguration.decodeResponse(data: data)
 ```
+
+Naturally, you'll want to obfuscate any keys stored in your application. For this,
+I recommend the obfuscation class in [UtiliKit](https://github.com/BottleRocketStudios/iOS-UtiliKit).
 
 ## Topics
 
@@ -38,8 +41,7 @@ preparation, the `AzureAppConfiguration.prepareRequest()` method ensures that al
 headers are set properly.
 
 You'll need to provide the endpoint, secret, and credential as obtained from the
-Azure App Configuration dashboard. See documentation on setting up this service here:
-*** WRITE MEDIUM ARTICLE AND PASTE URL HERE ***
+Azure App Configuration dashboard. See documentation on setting up this service [here](https://medium.com/@russellmirabelli/azure-app-configuration-for-mobile-apps-40c2f650a410) .
 
 ### Decoding the response
 
@@ -67,21 +69,17 @@ See the overall sample from within the unit tests, or as above.
 
 Requires iOS 13.0, tvOS 13.0, macOS 10.15
 
-
 ## Installation
 
 Add this to your project using Swift Package Manager. In Xcode that is simply: File > Swift Packages > Add Package Dependency... and you're done.
-
 
 ## Author
 
 [Bottle Rocket Studios](https://www.bottlerocketstudios.com/)
 
-
 ## License
 
 AzureAppConfiguration is available under the Apache 2.0 license. See [the LICENSE file](LICENSE) for more information.
-
 
 ## Contributing
 
